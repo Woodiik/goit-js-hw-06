@@ -13,6 +13,12 @@ const images = [
   },
 ];
 
-const markup = images.map(image => {
-   document.querySelector('.gallery').insertAdjacentHTML('beforeend', `<li class="gallery-item"><img class="gallery-img" src = "${image.url}" alt = "${image.alt}"></li>`);
+//const markup = images.map(image => {
+//   document.querySelector('.gallery').insertAdjacentHTML('beforeend', `<li class="gallery-item"><img class="gallery-img" src = "${image.url}" alt = "${image.alt}"></li>`);
+//})
+
+const markupAdd = images.map(image => {
+   const markup = `<li class="gallery-item"><img class="gallery-img" src = "${image.url}" alt = "${image.alt}"></li>`;
+   return markup;
 })
+document.querySelector('.gallery').insertAdjacentHTML('beforeend', markupAdd);
